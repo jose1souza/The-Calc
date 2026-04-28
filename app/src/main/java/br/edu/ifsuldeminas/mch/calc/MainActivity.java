@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.buttonMultiplicacaoID).setOnClickListener(v -> adicionarOperador("*"));
         findViewById(R.id.buttonDivisaoID).setOnClickListener(v -> adicionarOperador("/"));
 
-        findViewById(R.id.buttonVirgulaID).setOnClickListener(v -> adicionarValor(","));
+        findViewById(R.id.buttonVirgulaID).setOnClickListener(v -> adicionarVirgula());
 
         findViewById(R.id.buttonIgualID).setOnClickListener(v -> calcular());
 
@@ -66,7 +66,16 @@ public class MainActivity extends AppCompatActivity {
     private void adicionarValor(String valor) {
         expressaoAtual += valor;
         tvResultado.setText(expressaoAtual);
-        Log.d(TAG, "Valor adicionado: " + valor + " | Expressão: " + expressaoAtual);
+    }
+
+    private void adicionarVirgula() {
+        if (!expressaoAtual.isEmpty()) {
+            char ultimo = expressaoAtual.charAt(expressaoAtual.length() - 1);
+            if (Character.isDigit(ultimo)) {
+                expressaoAtual += ",";
+                tvResultado.setText(expressaoAtual);
+            }
+        }
     }
 
     private void adicionarOperador(String operador) {
@@ -79,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
 
         expressaoAtual += operador;
         tvResultado.setText(expressaoAtual);
-        Log.d(TAG, "Operador: " + operador + " | Expressão: " + expressaoAtual);
     }
 
     private void calcular() {
@@ -127,14 +135,12 @@ public class MainActivity extends AppCompatActivity {
         expressaoAtual = "";
         tvResultado.setText("0");
         tvExpressaoAnterior.setText("");
-        Log.d(TAG, "Resetado");
     }
 
     private void removerUltimo() {
         if (!expressaoAtual.isEmpty()) {
             expressaoAtual = expressaoAtual.substring(0, expressaoAtual.length() - 1);
             tvResultado.setText(expressaoAtual.isEmpty() ? "0" : expressaoAtual);
-            Log.d(TAG, "Delete | Expressão: " + expressaoAtual);
         }
     }
 }
