@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvExpressaoAnterior;
     private String expressaoAtual = "";
 
+    private boolean ultimoFoiResultado = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,13 +71,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void adicionarVirgula() {
-        if (!expressaoAtual.isEmpty()) {
-            char ultimo = expressaoAtual.charAt(expressaoAtual.length() - 1);
-            if (Character.isDigit(ultimo)) {
-                expressaoAtual += ",";
-                tvResultado.setText(expressaoAtual);
+        if (ultimoFoiResultado) {
+            expressaoAtual = "0,";
+            ultimoFoiResultado = false;
+        } else {
+            if (expressaoAtual.isEmpty()) {
+                expressaoAtual = "0,";
+            } else {
+                char ultimo = expressaoAtual.charAt(expressaoAtual.length() - 1);
+                if (Character.isDigit(ultimo)) {
+                    expressaoAtual += ",";
+                }
             }
         }
+        tvResultado.setText(expressaoAtual);
     }
 
     private void adicionarOperador(String operador) {
@@ -106,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
             tvExpressaoAnterior.setText(expressaoAtual + " =");
             tvResultado.setText(resultadoFinal);
             expressaoAtual = resultadoFinal;
+            ultimoFoiResultado = true;
 
             Log.d(TAG, "Resultado: " + resultadoFinal);
         } catch (Exception e) {
@@ -124,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
             tvExpressaoAnterior.setText(expressaoAtual + "%");
             tvResultado.setText(resultadoFinal);
             expressaoAtual = resultadoFinal;
+            ultimoFoiResultado = true;
 
             Log.d(TAG, "Porcentagem: " + resultadoFinal);
         } catch (Exception e) {

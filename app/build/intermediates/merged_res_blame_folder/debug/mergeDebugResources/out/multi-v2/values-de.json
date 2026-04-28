@@ -4,7 +4,7 @@
             "outputFile": "br.edu.ifsuldeminas.mch.calc.app-mergeDebugResources-30:/values-de/values-de.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\14679274654\\.gradle\\caches\\8.13\\transforms\\fe2bdc3f66096be5bcbefd9bbe0b728e\\transformed\\material-1.12.0\\res\\values-de\\values-de.xml",
+                    "source": "C:\\Users\\14679274654\\.gradle\\caches\\9.2.1\\transforms\\bd4133cd29c74c9163229607d677a65f\\workspace\\transformed\\material-1.12.0\\res\\values-de\\values-de.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\14679274654\\.gradle\\caches\\8.13\\transforms\\471890cc8b54b1a3604341e15462e6e6\\transformed\\appcompat-1.7.0\\res\\values-de\\values-de.xml",
+                    "source": "C:\\Users\\14679274654\\.gradle\\caches\\9.2.1\\transforms\\24c5b4d9977e13b68eda0e22494df94d\\workspace\\transformed\\appcompat-1.7.0\\res\\values-de\\values-de.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\14679274654\\.gradle\\caches\\8.13\\transforms\\76cb0223e9e35f31c81d0416fd0a53ed\\transformed\\core-1.13.0\\res\\values-de\\values-de.xml",
+                    "source": "C:\\Users\\14679274654\\.gradle\\caches\\9.2.1\\transforms\\795e3eabb80a41ac471fcb047efec859\\workspace\\transformed\\core-1.13.0\\res\\values-de\\values-de.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
