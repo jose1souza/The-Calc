@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">TheCalc</string>
+    <string name="app_name">Calculadora</string>
+    <string name="text_view_result_height">60dp</string>
 </resources>
